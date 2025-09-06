@@ -1,0 +1,59 @@
+/* Waybar – Gruvbox Dark (hard-ish) */
+@import url("../common.css");  /* ok if it exists; ignored if not */
+
+/* Palette */
+@define-color fg        #ebdbb2;
+@define-color fg_muted  #a89984;
+@define-color bg        #1d2021;
+@define-color bg1       #282828;
+@define-color red       #fb4934;
+@define-color green     #b8bb26;
+@define-color yellow    #fabd2f;
+@define-color blue      #83a598;
+@define-color purple    #d3869b;
+@define-color aqua      #8ec07c;
+@define-color orange    #fe8019;
+
+/* Base */
+* {
+  color: @fg;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "CaskaydiaMono Nerd Font", monospace;
+  font-size: 12px;
+}
+window#waybar {
+  background-color: alpha(@bg, 0.95);
+  color: @fg;
+}
+
+/* Consistent spacing */
+.modules-left  > *, .modules-center > *, .modules-right > * { margin: 0 8px; }
+.modules-left  { margin-left:  8px; }
+.modules-right { margin-right: 8px; }
+
+/* Workspaces: icons only, no pills */
+#workspaces { padding: 0 6px; }
+#workspaces button {
+  all: initial;
+  color: @fg_muted;
+  padding: 0 8px;
+  margin: 0 4px;
+  font-family: "CaskaydiaMono Nerd Font", monospace;
+  font-size: 12px;
+}
+#workspaces button:hover   { color: @fg; }
+#workspaces button.active  { color: @fg; border-bottom: 2px solid @aqua; }
+#workspaces button.empty   { opacity: 0.5; }
+
+/* Module colors (icons only) */
+#bluetooth    { color: @purple; }
+#network      { color: @blue; }
+#pulseaudio   { color: @green; }
+#cpu          { color: @fg_muted; }
+#battery      { color: @yellow; }
+#custom-notify, #custom-power { color: @fg; }
+
+/* Tray */
+#tray { icon-size: 12px; spacing: 12px; }

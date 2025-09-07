@@ -34,7 +34,7 @@
   };
 
   services.libinput.enable = true;
-  # services.displayManager.ly.enable = true;
+  services.displayManager.ly.enable = true;
   programs.zsh.enable = true;
   users.users.rodney = {
     isNormalUser = true;

@@ -5,10 +5,10 @@ let
 	create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 
 	configs = {
-		hypr = "hypr";
-		nvim = "nvim";
-		wofi = "wofi";
-		alacritty = "alacritty";
+    hypr = "hypr";
+    nvim = "nvim";
+    wofi = "wofi";
+    alacritty = "alacritty";
     fastfetch = "fastfetch";
     waybar = "waybar";
     bat = "bat";

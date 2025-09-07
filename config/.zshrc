@@ -26,13 +26,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Add in snippets
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::kubectx
-zinit snippet OMZP::command-not-found
-
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -42,7 +35,6 @@ zinit cdreplay -q
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
@@ -78,6 +70,7 @@ alias wov='cd ~/.config/wofi && nvim config.txt'
 alias zsh='cd && source .zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias nx='cd ~/nixos-dotfiles && nvim home.nix'
 alias nrs='sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos-btw'
 
 

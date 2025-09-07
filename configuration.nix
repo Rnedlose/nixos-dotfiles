@@ -2,29 +2,29 @@
 
 {
   imports =
-    [       
-	./hardware-configuration.nix
+    [
+	    ./hardware-configuration.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos-btw";  
-  # networking.wireless.enable = true; 
+  networking.hostName = "nixos-btw";
   networking.wireless.iwd.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-
-  time.timeZone = "America/Chicago";
-
-  services.printing.enable = true;
+  hardware.graphics.enable = true;
  
   security.rtkit.enable = true;
-  nixpkgs.config.allowUnfree = true;
+ 
+  time.timeZone = "America/Chicago";
+
+  services.libinput.enable = true;
+  services.displayManager.ly.enable = true;
+  services.printing.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -32,10 +32,7 @@
     pulse.enable = true;
     jack.enable = true;
   };
-
-  services.libinput.enable = true;
-  services.displayManager.ly.enable = true;
-  programs.zsh.enable = true;
+ 
   users.users.rodney = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
@@ -45,11 +42,11 @@
     ];
   };
 
+  programs.zsh.enable = true;
   programs.hyprland.enable = true;
+  nixpkgs.config.allowUnfree = true;
  
-  hardware.graphics.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
@@ -65,6 +62,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "25.05"; 
+  system.stateVersion = "25.05";
 }
 

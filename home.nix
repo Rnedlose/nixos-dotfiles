@@ -105,6 +105,8 @@ in
     docker
     lazydocker
     vlc
+    luaformatter
+    ruby-lsp
 	];
 
 }

@@ -51,10 +51,6 @@
 
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
   nixpkgs.config.allowUnfree = true;
  
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -64,13 +60,6 @@
     git
     alacritty
     impala
-    # Additional packages for Sway
-    swaybg
-    swayidle  
-    swaylock
-    grim
-    slurp
-    jq  # needed for sway screenshot script
   ];
  
   fonts.packages = with pkgs; [

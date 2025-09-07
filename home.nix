@@ -6,6 +6,7 @@ let
 
 	configs = {
     hypr = "hypr";
+    sway = "sway";
     nvim = "nvim";
     wofi = "wofi";
     alacritty = "alacritty";
@@ -60,12 +61,18 @@ in
 		nodejs
 		gcc
 		wofi
+		# Hyprland tools
 		hyprlock
 		hypridle
 		hyprpaper
-		hyprsunset
 		hyprpicker
 		hyprshot
+		# Sway tools
+		swaybg
+		swayidle
+		swaylock
+		grim
+		slurp
 		starship
 		fastfetch
 		btop

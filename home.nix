@@ -84,7 +84,7 @@ in
     cargo
     python314
     pavucontrol
-    ncpamixer
+    pamixer
     nautilus
     imv
     mpd
@@ -99,6 +99,11 @@ in
     spotify
     vesktop
     obsidian
+    lazygit
+    go
+    docker
+    lazydocker
+    vlc
 	];
 
 }

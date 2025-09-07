@@ -107,6 +107,7 @@ in
     vlc
     luaformatter
     ruby-lsp
+    vial
 	];
 
 }

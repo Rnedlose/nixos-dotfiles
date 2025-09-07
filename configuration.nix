@@ -32,6 +32,13 @@
     pulse.enable = true;
     jack.enable = true;
   };
+  services.udev = {
+    packages = with pkgs; [
+      qmk-udev-rules
+      vial
+      via
+    ];
+  };
  
   users.users.rodney = {
     isNormalUser = true;

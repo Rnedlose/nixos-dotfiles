@@ -78,8 +78,6 @@ alias wov='cd ~/.config/wofi && nvim config.txt'
 alias zsh='cd && source .zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias td='tmux a -t Dots'
-alias ts='tmux a -t Scratchpad'
 alias nrs='sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos-btw'
 
 

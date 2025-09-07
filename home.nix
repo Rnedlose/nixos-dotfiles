@@ -15,6 +15,7 @@ let
     btop = "btop";
     mako = "mako";
     swayosd = "swayosd";
+    tmux = "tmux";
 	};
 in
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DIR="$HOME/dotfiles/.config/backgrounds"
+DIR="$HOME/.config/backgrounds"
 notify() { command -v notify-send >/dev/null && notify-send "Wallpaper" "$1" || true; }
 
 # Wait until hyprpaper's IPC is ready (hyprpaper must be running)
@@ -21,7 +21,7 @@ for _ in {1..50}; do
 done
 
 # Collect candidates (jpg/png) recursively
-mapfile -d '' -t files < <(find "$DIR" -type f \
+mapfile -d '' -t files < <(find -L "$DIR" -type f \
   \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.webp' \) -print0)
 
 ((${#files[@]} > 0)) || {

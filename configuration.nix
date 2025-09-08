@@ -62,6 +62,7 @@
     kitty
     impala
     pyprland
+    google-chrome
   ];
  
   fonts.packages = with pkgs; [

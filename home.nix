@@ -103,7 +103,6 @@ in
     nautilus
     imv
     mpd
-    chromium
     warp-terminal
     unzip
     yaru-theme

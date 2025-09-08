@@ -36,9 +36,20 @@ in
 	home.sessionPath = [ "/home/rodney/.local/bin" ];
   
   # Zsh configuration - goes in home directory, not .config
-  home.file.".zshrc" = {
-    source = create_symlink "${dotfiles}/.zshrc";
-  };
+  # Also manage local scripts in ~/.local/bin from ./scripts
+  home.file =
+    {
+      ".zshrc" = {
+        source = create_symlink "${dotfiles}/.zshrc";
+      };
+    }
+    // (builtins.listToAttrs (map (name: {
+      name = ".local/bin/${name}";
+      value = {
+        source = ./scripts + "/${name}";
+        executable = true;
+      };
+    }) (builtins.attrNames (builtins.readDir ./scripts))));
 
   # Combine all xdg.configFile entries
 	xdg.configFile = (builtins.mapAttrs

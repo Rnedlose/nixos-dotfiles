@@ -6,26 +6,37 @@
   border-radius: 0;
   min-height: 0;
 
-  font-family: Hack Nerd Font, monospace;
+  font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 12px;
 }
 
 /* Even spacing for all right-side icons */
-.modules-right > * {
+.modules-right>* {
   margin-left: 8px;
   margin-right: 8px;
 }
 
 /* Fallback for GTK quirks: explicitly list the modules, same gap */
-#bluetooth, #network, #pulseaudio, #cpu, #battery, #custom-notify, #custom-scripts{
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#battery,
+#custom-notify,
+#custom-scripts {
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.modules-left  { margin-left: 12px; }
+.modules-left {
+  margin-left: 12px;
+}
 
 /* Workspaces */
-#workspaces { padding: 0 6px; }
+#workspaces {
+  padding: 0 6px;
+}
+
 #workspaces button {
   all: initial;
   padding: 0 8px;
@@ -33,8 +44,12 @@
   min-width: 9px;
   color: @text;
 }
-#workspaces button.empty   { opacity: 0.5; }
-#workspaces button.active  {
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#workspaces button.active {
   color: @mauve;
   border-bottom: 2px solid @mauve;
 }
@@ -51,12 +66,25 @@
   margin: 0 7.5px;
 }
 
-#network     { color: @blue; }
-#pulseaudio  { color: @green; }
-#battery     { color: @yellow; }
-#bluetooth   { color: @mauve; }
+#network {
+  color: @blue;
+}
 
-#custom-expand-icon { margin-right: 7px; }
+#pulseaudio {
+  color: @green;
+}
+
+#battery {
+  color: @yellow;
+}
+
+#bluetooth {
+  color: @mauve;
+}
+
+#custom-expand-icon {
+  margin-right: 7px;
+}
 
 tooltip {
   padding: 6px 8px;
@@ -70,8 +98,11 @@ tooltip {
   color: @red;
   animation: blink 1s steps(2, start) infinite;
 }
+
 @keyframes blink {
-  to { opacity: 0; }
+  to {
+    opacity: 0;
+  }
 }
 
 window#waybar {

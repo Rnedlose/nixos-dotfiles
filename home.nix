@@ -18,6 +18,7 @@ let
     swayosd = "swayosd";
     tmux = "tmux";
     yazi = "yazi";
+    backgrounds = "backgrounds";
 	};
 in
 
@@ -78,6 +79,7 @@ in
 		hyprpaper
 		hyprpicker
 		hyprshot
+		hyprsunset
 		starship
 		fastfetch
 		btop

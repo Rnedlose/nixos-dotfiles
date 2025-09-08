@@ -6,6 +6,7 @@ let
 
 	configs = {
     hypr = "hypr";
+    kitty = "kitty";
     nvim = "nvim";
     wofi = "wofi";
     alacritty = "alacritty";
@@ -16,6 +17,7 @@ let
     mako = "mako";
     swayosd = "swayosd";
     tmux = "tmux";
+    yazi = "yazi";
 	};
 in
 
@@ -107,6 +109,8 @@ in
     luaformatter
     ruby-lsp
     vial
+    ranger
+    yazi
 	];
 
 }

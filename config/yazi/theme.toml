@@ -1,0 +1,6 @@
+# Yazi theme configuration
+# This file specifies which theme to use
+
+# Use the Vague theme
+# The theme file should be located at themes/vague.toml
+use = "vague"

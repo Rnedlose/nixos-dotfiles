@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, pyprland, ... }:
 
 {
   imports =
@@ -59,7 +59,9 @@
     wget
     git
     alacritty
+    kitty
     impala
+    pyprland
   ];
  
   fonts.packages = with pkgs; [

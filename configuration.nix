@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pyprland, ... }:
+{ config, lib, pkgs, pyprland, nixpkgs-unstable, ... }:
 
 {
   imports =

@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs-unstable, ... }:
 
 let
 	dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
 	create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+	pkgs-unstable = import nixpkgs-unstable { system = pkgs.system; config.allowUnfree = true; };
 
 	configs = {
     hypr = "hypr";
@@ -121,8 +122,13 @@ in
     luaformatter
     ruby-lsp
     vial
-    ranger
     yazi
-	];
+    file-roller
+    zathura
+    typora
+    obs-studio
+  ] ++ (with pkgs-unstable; [
+    wiremix
+	]);
 
 }

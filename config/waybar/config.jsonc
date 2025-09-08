@@ -36,7 +36,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    // "on-click": "kitty --class=Impala -e impala"
     "on-click": "kitty --class=Impala -e impala"
   },
   "hyprland/workspaces": {
@@ -133,7 +132,8 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "pavucontrol",
+    // "on-click": "pavucontrol",
+    "on-click": "kitty --class=Wiremix -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,

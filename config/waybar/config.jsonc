@@ -6,18 +6,18 @@
   "height": 22,
   "modules-left": [
     "custom/scripts",
-    "hyprland/workspaces",
-    "hyprland/window"
+    "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock"
+    "hyprland/window"
   ],
   "modules-right": [
     "network",
     "bluetooth",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "clock"
   ],
   "network": {
     "format-icons": [

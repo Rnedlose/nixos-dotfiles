@@ -67,6 +67,24 @@ in
     };
   };
 	
+	# GTK Theme Configuration
+	gtk = {
+		enable = true;
+		theme = {
+			package = pkgs.yaru-theme;
+			name = "Yaru-dark";
+		};
+		iconTheme = {
+			package = pkgs.yaru-theme;
+			name = "Yaru-blue";
+		};
+	};
+
+	# Dark theme preference for libadwaita apps
+	dconf.settings."org/gnome/desktop/interface" = {
+		color-scheme = "prefer-dark";
+	};
+
 	home.packages = with pkgs; [
 		neovim
 		ripgrep
